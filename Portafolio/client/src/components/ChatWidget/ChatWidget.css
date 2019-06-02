@@ -1,0 +1,67 @@
+input[type="text"]:focus {
+    border: 1px solid #300d4f;
+  }
+
+  .contact-btn {
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #331550;
+    border: 1px solid #331550;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .contact-btn:hover {
+    color: white;
+    background-color: rebeccapurple;
+  }
+
+  .status-messages {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .message {
+    background-color: #f6f6f6;
+    clear: both;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+  }
+
+  .message.user {
+    float: right;
+    background-color: #003366;
+    color: white;
+  }
+
+  .message.support {
+    float: left;
+    background-color: #ddd;
+  }
+
+  .message-form {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .close {
+    color: white;
+    float: right;
+    font-size: 35px;
+
+  }
+
+  .close-btn {
+    color: white;
+    float: right;
+    font-size: 2.5em;
+    margin: 5px;
+  }
+
+  .close-btn:hover {
+    color: #003366; 
+    cursor: pointer;
+  }  
