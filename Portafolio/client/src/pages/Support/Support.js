@@ -108,7 +108,7 @@ import "./Support.css";
           .post("/users", { userId })
           .then(() => {
             const tokenProvider = new Chatkit.TokenProvider({
-              url: "http://yellowstone.herokuapp.com/authenticate"
+              url: "https://yellowstone.herokuapp.com/authenticate"
             });
 
             const chatManager = new Chatkit.ChatManager({
