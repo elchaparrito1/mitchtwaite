@@ -122,7 +122,7 @@ class MessageMe extends React.Component {
             API.sendChat(userId)
               .then(() => {
                 const tokenProvider = new Chatkit.TokenProvider({
-                  url: "http://localhost:3000/authenticate"
+                  url: "http://yellowstone.herokuapp.com/authenticate"
                 });
   
                 const chatManager = new Chatkit.ChatManager({
