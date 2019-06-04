@@ -7,7 +7,6 @@ import MyResume from "../../components/MyResume/MyResume";
 
 class Resume extends React.Component {
 
-
     componentDidMount() {
         window.scrollTo(0, 0);
     }
