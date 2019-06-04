@@ -46,34 +46,8 @@ class MyResume extends Component {
                 timeline: "Oct 2008 – Dec 2013",
                 description: "I worked for over two years as a Quality Control Inspector sampling and testing raw materials for the company. My primary project during this tenure was implementing the software of a new device the company had purchased for sampling raw materials. I had to create many arrays of scans per raw material and cache the data into the database in order to achieve more consistent testing of raw materials. This was accomplished and led to heightened accuracy in identifying the materials arriving in house."
             },
-            
-        ],
-        position: "fixed",
-        top: ""
+        ]
     }
-
-
-    componentDidMount = () => {
-        window.addEventListener("resize", this.handleScroll);
-    };
-    
-    componentWillUnmount = () => {
-        window.removeEventListener("resize", this.handleScroll);
-    };
-    
-    handleScroll = () =>  {
-        if (window.pageYOffset > 2000 && window.innerWidth > 993) {
-            this.setState({
-                position: "relative",
-                top: "1875px"
-            });
-        } else {
-            this.setState({
-                position: "",
-                top: ""
-            });
-        }
-    };
 
     renderWork = () => {
         return this.state.work.map((job, index) => {
@@ -109,7 +83,7 @@ render() {
         <Container>
             <Row>
                 <Column style={{marginBottom: "82px"}} lg="3" md="3" sm="12" xs="12">
-                    <MyContainer style={{position: this.state.position, top: this.state.top}}>
+                    <MyContainer>
                         <Flip left>
                             <br/>
                             <Row>
