@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const messageRoute = express.Router();
 const path = require("path");
+const compression = require("compression");
+
+app.use(compression());
 
 require("dotenv").config({ path: ".env" });
 const PORT = process.env.PORT || 3001;
