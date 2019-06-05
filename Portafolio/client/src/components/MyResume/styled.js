@@ -25,6 +25,7 @@ function getWidthString(span) {
 export const Column = styled.div`
     float: left;
     margin: 0 auto;
+    height: ${props => props.container ? "400px" : ""};
     ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
     
 
@@ -84,7 +85,7 @@ export const MyContainer = styled.div`
         margin: 0 auto;
         position: relative;
         top: 0;
-        width: 90%
+        width: 90%;
 
         -moz-box-shadow: 0 0 0px #ccc;
         -webkit-box-shadow: 0 0 0px #ccc;
@@ -98,7 +99,7 @@ export const MyContainer = styled.div`
         margin: 0 auto;
         position: relative;
         top: 0;
-        width: 90%
+        width: 90%;
 
         -moz-box-shadow: 0 0 0px #ccc;
         -webkit-box-shadow: 0 0 0px #ccc;
