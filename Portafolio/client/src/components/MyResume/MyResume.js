@@ -62,7 +62,6 @@ class MyResume extends Component {
     };
     
     handleScroll = () =>  {
-        console.log(window.pageYOffset, window.innerWidth);
         if (window.pageYOffset > 2000 && window.innerWidth > 993) {
             this.setState({
                 position: "relative",
