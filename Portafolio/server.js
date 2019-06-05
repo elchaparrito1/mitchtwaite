@@ -32,11 +32,13 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // ... other app.use middleware 
-if(process.env.NODE_ENV === 'production'){
-    //set static folder
-    app.use(express.static('client/build'));
-}
+app.use(express.static(path.join(__dirname, "client", "build")))
 
+//Other option:
+// if(process.env.NODE_ENV === 'production'){
+//     //set static folder
+//     app.use(express.static('client/build'));
+// }
 // ...
 
 
