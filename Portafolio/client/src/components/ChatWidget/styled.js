@@ -117,7 +117,7 @@ export const MessageInput = styled.input`
     padding: 20px;
     font-size: 16px;
     background-color: #f6f6f6;
-    width: 100%;
+   
     float: left;
 
     :focus {

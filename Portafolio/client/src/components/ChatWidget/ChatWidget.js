@@ -44,7 +44,7 @@ import {
               </Column>
             </Row>
             <Row style={{backgroundColor: "#f6f6f6", borderTop: "1px solid #ccc"}}>
-              <Column lg="10" md="10" sm="10" xs="10">
+              <Column lg="9" md="9" sm="9" xs="9">
                 <form onSubmit={sendMessage} className="message-form">
                   <MessageInput
                     className="message-input"
@@ -56,7 +56,7 @@ import {
                   />
                 </form>
               </Column>
-              <Column lg="2" md="2" sm="2" xs="2">
+              <Column lg="3" md="3" sm="3" xs="3">
                 <Button onClick={sendMessage}>Send</Button>
               </Column>
             </Row>
