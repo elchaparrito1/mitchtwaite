@@ -5,6 +5,11 @@ const cors = require("cors");
 const messageRoute = express.Router();
 const path = require("path");
 const compression = require("compression");
+var http = require("http");
+setInterval(function() {
+    console.log("Running");
+    http.get("http://www.mitchtwaite.com");
+}, 300000);
 
 app.use(compression());
 
