@@ -150,7 +150,7 @@ render() {
                             <br/>
                             <Row>
                                 <Column lg="12" md="12" sm="12" xs="12">
-                                    <A href="https://drive.google.com/file/d/13XEXNFoGJfAXMI97tnZrmjmRP7tN5jYc/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{color: "#003366"}}>
+                                    <A href="https://drive.google.com/file/d/1w9fTD4MaD0-a684xTokyu5wOKuS-6zd0/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{color: "#003366"}}>
                                         <Icon src={imgPrint} alt="print icon"/>
                                         Print Resume
                                     </A>
