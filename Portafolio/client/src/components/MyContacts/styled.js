@@ -84,7 +84,7 @@ export const Timer = styled(Box)`
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         font-size: 1.5em;
-        width: 100%
+        width: 100%;
         height: 100px;
     }
 

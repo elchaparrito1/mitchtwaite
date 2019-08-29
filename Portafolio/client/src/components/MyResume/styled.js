@@ -6,7 +6,7 @@ export const Row = styled.div`
         clear: both;
         display: table;
     }
-    margin-bottom: ${props => props.break ? "100px" : ""}
+    margin-bottom: ${props => props.break ? "100px" : ""};
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         margin-top: 0px;

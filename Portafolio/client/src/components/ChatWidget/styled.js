@@ -39,7 +39,7 @@ export const Button = styled.button`
     background-color: #f6f6f6;
     color: black;
     height: 50px;
-    font-size: 1.1em
+    font-size: 1.1em;
     font-family: "Lato", Helvetica, sans-serif;
 
     :hover {
