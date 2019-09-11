@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import { createGlobalStyle } from 'styled-components'
+// import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
-  body {
-    color: #edeae7;
-  }
-`;
+// export const GlobalStyle = createGlobalStyle`
+//   body {
+//     color: #edeae7;
+//   }
+// `;
 
 export const PhantomWrapper = styled.div`
     display: block;
