@@ -7,16 +7,33 @@ import MyResume from "../../components/MyResume/MyResume";
 
 class Resume extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.footerRef = React.createRef();
+        this.state = {
+            measurement: ""
+        }
+    }
+    
     componentDidMount() {
         window.scrollTo(0, 0);
+        let measurement = this.footerRef.current.offsetTop;
+        console.log(`Measurement: ${measurement}`)
+        this.setState({
+            measurement: measurement
+        })
     }
     
     render() {
     return (
         <PhantomWrapper>
             <Navbar/>
-                <MyResume/>
-            <Footer/>
+                <MyResume 
+                measurement={this.state.measurement}
+                />
+                <div ref={this.footerRef}>
+                    <Footer/>
+                </div>
         </PhantomWrapper>
      )
     }

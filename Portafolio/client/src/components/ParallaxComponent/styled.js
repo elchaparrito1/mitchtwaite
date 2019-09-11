@@ -51,7 +51,7 @@ export const ParentDiv = styled.div`
     display: table;
     height: 100vh;
     width: 100%;
-
+    font-family: Roboto+Slab, Helvetica, sans-serif;
     position: absolute;
     top: 0;
 `;
@@ -63,7 +63,7 @@ export const ChildDiv = styled.div`
 
 export const Header = styled.h1`
     color: black;
-    font-family: "Lato:400,900, Helvetica, sans-serif";
+    
     font-size: ${props => props.primary ? "3em" : "5.5em"};
     margin-bottom: 50px;
     text-align: center;

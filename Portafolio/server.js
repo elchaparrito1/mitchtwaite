@@ -54,9 +54,12 @@ messageRoute.route("/contact/send-message").post(function(req, res) {
         res.json("missing information");
     } else {
         
+        console.log(process.env.EMAIL);
+        
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 587,
+            service: "Gmail",
             secure: false,
             requireTLS: true,
             auth: {

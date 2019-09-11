@@ -16,6 +16,7 @@ import imgFacebook from "../../images/facebook.png";
 import imgGithub from "../../images/github.png";
 
 
+
 class Footer extends React.Component {
 
     state = {
@@ -28,7 +29,7 @@ class Footer extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-    }
+      }
 
     componentWillUnmount() {
         window.scrollTo(0, 0);
