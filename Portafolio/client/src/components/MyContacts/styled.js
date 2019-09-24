@@ -69,7 +69,7 @@ export const Box = styled.div`
 `;
 
 export const Timer = styled(Box)`
-    font-size: 1.6em;
+    font-size: 1.4em;
     height: 200px;
     width: 50%;
     margin: 0 auto;
@@ -83,13 +83,13 @@ export const Timer = styled(Box)`
     }
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: 1.5em;
+        font-size: 1.3em;
         width: 100%;
         height: 100px;
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: 1.5em;
+        font-size: 1.3em;
         width: 100%;
         height: 120px;
     }
