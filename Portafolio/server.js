@@ -5,6 +5,7 @@ const cors = require("cors");
 const messageRoute = express.Router();
 const path = require("path");
 const compression = require("compression");
+const sgMail = require("@sendgrid/mail");
 var http = require("http");
 setInterval(function() {
     http.get("http://www.mitchtwaite.com");
@@ -53,37 +54,22 @@ messageRoute.route("/contact/send-message").post(function(req, res) {
     if (name === "" || email === "" || message === "") {
         res.json("missing information");
     } else {
-        
-        console.log(process.env.EMAIL);
-        
-        let transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 587,
-            service: "Gmail",
-            secure: false,
-            requireTLS: true,
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
-            }
-        });
-        
-        let mailOptions = {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        const msg = {
+            to: "mitchelltwaite11@gmail.com",
             from: email,
-            replyTo: email,
-            to: process.env.EMAIL,
-            subject: "New Message - Personal Site",
-            text: message
-        };
-        
-        transporter.sendMail(mailOptions, function(err, response) {
+            subject: `Personal Message From: ${name}`,
+            text: message,
+            html: `<p>${message}</p>`
+        }
+
+        sgMail.send(msg, function(err, response) {
             if (err) {
-                console.error("there was an error: ", err);
+                res.json("error");
             } else {
-                console.log("here is the res: ", response);
                 res.status(200).json("email sent");
             }
-        });
+        });;
     }
 });
 ////////////////////////////////////////////////////////

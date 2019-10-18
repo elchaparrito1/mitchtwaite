@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@pusher/chatkit-server": "^1.1.0",
+    "@sendgrid/mail": "^6.4.0",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "c": "^0.1.0",
@@ -15,8 +16,6 @@
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "nexmo": "^2.4.1",
-    "nodemailer": "^6.2.1",
-    "nodemailer-mailgun-transport": "^1.4.0",
     "path": "^0.12.7"
   },
   "scripts": {
