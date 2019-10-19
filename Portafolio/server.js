@@ -15,7 +15,6 @@ app.use(compression());
 
 require("dotenv").config({ path: ".env" });
 const PORT = process.env.PORT || 3001;
-let nodemailer = require("nodemailer");
 //Added from Pusher
 const Chatkit = require("@pusher/chatkit-server");
 const chatkit = new Chatkit.default({

@@ -75,7 +75,11 @@ class EmailMe extends React.Component {
                       this.setState({
                           sent: "missing information"
                       });
-                  }
+                  } else if (response.data === "error") {
+                    this.setState({
+                        sent: "error occurred; email not sent"
+                    });
+                } 
               })
               .catch(error => {
                   console.log(error.data);
