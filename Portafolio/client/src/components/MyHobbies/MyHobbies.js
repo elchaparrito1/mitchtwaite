@@ -90,14 +90,14 @@ class MyHobbies extends React.Component {
 
     const descrip = [
         "Riding and training horses is a big part of my life. It is a pastime that requires dedication and patience, but is very rewarding in the end.",
-        "Even hanging out in the pasture to let the horses know they are part of the family is a hobby.",
+        "Horses are a big part of my life, and the family just loves to hangout at the pasture as much as we can.",
         "Growing up in the Rocky Mountains, it is tough to not take up skiing. I'm no exception and have been skiing since the age of 3.",
         "Traveling is a big part of my life but why? It's mostly due to history and culture. I love to study history, and go places where it is palpable.",
         "Hiking is secondary to riding horses, but another great hobby is hiking to the top of the Tetons.",
         "Again, skiing is in my DNA. If I had to choose a preferred type though, it would be water skiing everytime.",
         "My wife and I love to bake and cook. From various authentic Mexican dishes, to good ol'fashioned cherry pie, we are in the kitchen a lot.",
         "Both playing and teaching sports is an important pastime. Coaching little ones is especially fun.",
-        "I love to spot and observe animals in the wild. It's a hobby I find both relaxing and educational."
+        "I love to to be in nature, and especially spot wildlife. It's a hobby I find both relaxing and educational."
     ]
 
     return (

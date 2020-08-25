@@ -12,10 +12,10 @@ import {
     A
 } from "./styled";
 import img from "../../images/chevron.png";
-import eventImg from "../../images/event-dash.png";
+import crawlerImg from "../../images/crawler.png";
 import tatuImg from "../../images/tatu.png";
-import crystalImg from "../../images/crystal.png";
-import clickyImg from "../../images/clicky-game.png";
+import hugoImg from "../../images/Hugo-LP.png";
+import pfnImg from "../../images/PFN.png";
 import "./flexcard.css";
 
 class MyProjects extends React.Component {
@@ -23,32 +23,32 @@ class MyProjects extends React.Component {
     state = {
         cards: [
             {
+                img: pfnImg,
+                title: "Pace News",
+                descrip: "Pace Football News is designed as a news aggregator website. The great thing about this site is the use of the JAMstack philosophy. Using a WordPress CMS, content is easily uploaded by the client to their WordPress environment. Then this content is fed through to the uniquely neumorphic frontend - built using NextJS for server-side rendering - to allow for a perfectly scalable/configurable/very-fast user experience.",
+                linkOne: "https://www.pace-news.com/",
+                linkTwo: "https://github.com/elchaparrito1/PFN/tree/master/pfn"
+            },
+            {
+                img: hugoImg,
+                title: "Hugo-LP Forum",
+                descrip: "Hugo-LP is an application built using MERN stack technologies. Namely Mongo DB, Express js, React js, and Node js. The client wanted a simple, yet modern-looking website that would be easy for prospective customers to navigate; find important information; or sign up for future forums. What I love about this site is the look and feel, but also the simple use of React and Javascript logic to meet the client's needs.",
+                linkOne: "http://www.hugo-lpf.com/",
+                linkTwo: "https://github.com/elchaparrito1/Hugo-LP-Forum"
+            },
+            {
+                img: crawlerImg,
+                title: "News Crawler",
+                descrip: "In connection with the Pace News application, my client also wanted a quicker way to search news on the carefully chosen websites from which news is curated. The crawler(s) utilizes Google's Puppeteer to visit the selected websites from the client's list to scrape the desired news articles, which are then sent via nodemailer with a handlebars template to the client for review and use in the WP CMS. It is also important to follow each website's scraping policies, so a node package is used, which dynamically checks if the specified url is allowed for scraping.",
+                linkOne: "https://github.com/elchaparrito1/PFN-EU-ENG-Crawler",
+                linkTwo: "https://github.com/elchaparrito1/PFN-EU-ENG-Crawler"
+            },
+            {
                 img: tatuImg,
                 title: "Tatu",
                 descrip: "This is a multi-user app built with the MERN stack (MongoDB, ExpressJS, NodeJS, ReactJS) with mobile first design. My part: CSS design on each page, built all front end components for the Home page, and modal functionality, built back end routes/controllers for the forgot password functionality. Technology used: React, React Router, Express, Express Session, bcrypt, NodeJS, MongoDB, Axios, APIs, React-Materialize and Google Fonts and Icons.",
                 linkOne: "https://tatuappv2.herokuapp.com/",
                 linkTwo: "https://github.com/penajtokyo/tatu"
-            },
-            {
-                img: eventImg,
-                title: "Event Dash",
-                descrip: "Event Dash was made to be a one-stop shop for all events. My part: integration of Google Maps and Smarty Streets API for map functionality in the event details and with Firebase DB. Technology used: HTML5, CSS3, Materialize, Google Fonts, JavaScript/jQuery, Firebase (DB and Authentication), APIs (Smarty Streets, Google, Twitter).",
-                linkOne: "https://chancyleath.com/Event-Dash/",
-                linkTwo: "https://github.com/chancy23/Event-Dash"
-            },
-            {
-                img: clickyImg,
-                title: "Lord of the Click",
-                descrip: "This was an application built using ReactJS. The idea behind the application is showing the power of state within ReactJS. Follow the links below to either look at the source code or play the game. If you're an aficionado of Lord of the Rings - like myself - you'll enjoy this game!",
-                linkOne: "https://elchaparrito1.github.io/clicky-game/",
-                linkTwo: "https://github.com/elchaparrito1/clicky-game"
-            },
-            {
-                img: crystalImg,
-                title: "Gem Magic",
-                descrip: "Gem Magic is a simple click game utilizing the fundamentals of Jquery and vanilla Javascript. Clicking on a gem will add points your total score. You can win Gem Magic by matching your total score to the target number. The value of each gem is hidden until clicked upon. Choose wisely, and victory is yours!",
-                linkOne: "https://elchaparrito1.github.io/unit-4-game/",
-                linkTwo: "https://github.com/elchaparrito1/unit-4-game"
             }
         ]
     }

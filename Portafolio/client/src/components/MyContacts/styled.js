@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const Flex = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+        flex-direction: column;
+    }
+`;
+
 export const Row = styled.div`
     &::after {
         content: "";

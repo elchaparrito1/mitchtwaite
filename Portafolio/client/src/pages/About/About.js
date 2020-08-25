@@ -4,7 +4,7 @@ import ParallaxComponent from "../../components/ParallaxComponent/ParallaxCompon
 import MyInterests from "../../components/MyInterests/MyInterests";
 import MyTravels from "../../components/MyTravels/MyTravels";
 import MyHobbies from "../../components/MyHobbies/MyHobbies";
-import MyVideo from "../../components/MyVideo/MyVideo";
+// import MyVideo from "../../components/MyVideo/MyVideo";
 import img from "../../images/abstract-background.jpg";
 import emoji from "../../images/wink.png";
 import { 
@@ -57,7 +57,6 @@ class About extends React.Component {
                             </Column>
                         </Row>
                     </Container>
-                <MyVideo />
                 <Footer/>
             </PhantomWrapper>
          )

@@ -145,7 +145,7 @@ class Footer extends React.Component {
                     </Row>
                     <Row copyright>
                         <Column copyright lg="12" md="12" sm="12" xs="12">
-                            <Text copyright> © 2019 Mitchell Waite. All rights reserved.</Text>
+                            <Text copyright> © 2020 Mitchell Waite. All rights reserved.</Text>
                         </Column>
                     </Row>
             </Foot>
