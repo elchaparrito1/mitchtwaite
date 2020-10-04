@@ -23,6 +23,12 @@ class MyResume extends Component {
         state = {
             work: [
                 {
+                    title: "Freelance Software Developer",
+                    company: "self-employed",
+                    timeline: "Mar 2019 - Present",
+                    description: "As my portfolio reflects, I've been able to work on a varied array of projects for clients. I've primarily built applications using the MERN stack, but I've also had unique opportunities to build web crawlers, and follow JAMstack theory in creating WordPress CMS backends with ReactJS frontends. I've worked hard to assess each client's vision, and build a custom design to suit their needs."
+                },
+                {
                     title: "Software Developer",
                     company: "Foursteps",
                     timeline: "Jun 2019 - Nov 2019",
@@ -149,6 +155,7 @@ render() {
                                     <A href="https://drive.google.com/file/d/1u7iZNtddi5N7ae8NwVoq7UqQbpA3vuJd/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{color: "#003366"}}>
                                         <Icon src={imgPrint} alt="print icon"/>
                                         Print Resume
+
                                     </A>
                                 </Column>
                             </Row>

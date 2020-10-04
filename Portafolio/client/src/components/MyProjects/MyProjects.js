@@ -12,7 +12,7 @@ import {
     A
 } from "./styled";
 import img from "../../images/chevron.png";
-import crawlerImg from "../../images/crawler.png";
+import crawlerImg from "../../images/puppeteer.png";
 import tatuImg from "../../images/tatu.png";
 import hugoImg from "../../images/Hugo-LP.png";
 import pfnImg from "../../images/PFN.png";
@@ -33,15 +33,13 @@ class MyProjects extends React.Component {
                 img: hugoImg,
                 title: "Hugo-LP Forum",
                 descrip: "Hugo-LP is an application built using MERN stack technologies. Namely Mongo DB, Express js, React js, and Node js. The client wanted a simple, yet modern-looking website that would be easy for prospective customers to navigate; find important information; or sign up for future forums. What I love about this site is the look and feel, but also the simple use of React and Javascript logic to meet the client's needs.",
-                linkOne: "http://www.hugo-lpf.com/",
+                linkOne: "https://www.hugo-lpf.com/",
                 linkTwo: "https://github.com/elchaparrito1/Hugo-LP-Forum"
             },
             {
                 img: crawlerImg,
                 title: "News Crawler",
                 descrip: "In connection with the Pace News application, my client also wanted a quicker way to search news on the carefully chosen websites from which news is curated. The crawler(s) utilizes Google's Puppeteer to visit the selected websites from the client's list to scrape the desired news articles, which are then sent via nodemailer with a handlebars template to the client for review and use in the WP CMS. It is also important to follow each website's scraping policies, so a node package is used, which dynamically checks if the specified url is allowed for scraping.",
-                linkOne: "https://github.com/elchaparrito1/PFN-EU-ENG-Crawler",
-                linkTwo: "https://github.com/elchaparrito1/PFN-EU-ENG-Crawler"
             },
             {
                 img: tatuImg,
@@ -64,13 +62,23 @@ class MyProjects extends React.Component {
                               <img className="flip-card-image" src={card.img} alt="Avatar" />
                               <Text>{card.title}</Text>
                             </div>
-                            <div className="flip-card-back">
-                              <Boxtext>Description</Boxtext>
-                                <P>{card.descrip}</P> 
-                              <Boxtext>Links</Boxtext>
-                                <A href={card.linkOne} target="_blank"><strong>DEPLOYED APP</strong></A>
-                                <A href={card.linkTwo} target="_blank"><strong>SOURCE CODE</strong></A>
-                            </div>
+                            {
+                              (card.title === "News Crawler") 
+                                ?
+                                <div className="flip-card-back">
+                                    <Boxtext>Description</Boxtext>
+                                        <P>{card.descrip}</P> 
+                                </div>
+                                :
+                                <div className="flip-card-back">
+                                    <Boxtext>Description</Boxtext>
+                                        <P>{card.descrip}</P> 
+                                    <Boxtext>Links</Boxtext>
+                                    <A href={card.linkOne} target="_blank"><strong>DEPLOYED APP</strong></A>
+                                    <A href={card.linkTwo} target="_blank"><strong>SOURCE CODE</strong></A>
+                                </div>
+                            }
+                            
                         </div>
                     </div>
                 </Bounce>
