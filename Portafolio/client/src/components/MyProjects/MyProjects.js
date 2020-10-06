@@ -26,7 +26,7 @@ class MyProjects extends React.Component {
                 img: pfnImg,
                 title: "Pace News",
                 descrip: "Pace Football News is designed as a news aggregator website. The great thing about this site is the use of the JAMstack philosophy. Using a WordPress CMS, content is easily uploaded by the client to their WordPress environment. Then this content is fed through to the uniquely neumorphic frontend - built using NextJS for server-side rendering - to allow for a perfectly scalable/configurable/very-fast user experience.",
-                linkOne: "https://www.pace-news.com/",
+                linkOne: "https://www.pacefootballnews.com/",
                 linkTwo: "https://github.com/elchaparrito1/PFN/tree/master/pfn"
             },
             {
