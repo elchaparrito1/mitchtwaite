@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {
     Modal
-} from "./styled";
-import PropTypes from "prop-types";
-import "./Dialog.css";
+} from './styled';
+import PropTypes from 'prop-types';
+import './Dialog.css';
 
 
 class DialogModal extends React.Component {
@@ -35,7 +35,7 @@ class DialogModal extends React.Component {
                     </div>
                   </div>
                 </Modal>,
-        document.querySelector("#modal")
+        document.querySelector('#modal')
     )
   };
 };

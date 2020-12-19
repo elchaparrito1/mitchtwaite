@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     Row,
     Column,
@@ -6,7 +6,7 @@ import {
     Head,
     Text,
     A
-} from "./styled";
+} from './styled';
 
 const CallMe = () => {
     return (

@@ -1,7 +1,7 @@
-import React from "react";
-import Bounce from "react-reveal/Bounce";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import React from 'react';
+import Bounce from 'react-reveal/Bounce';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import { 
     Container, 
     Row, 
@@ -11,40 +11,41 @@ import {
     Icon,
     ImgDiv,
     Img
-} from "./styled";
-import img from "../../images/chevron.png";
-import moabImg from "../../images/utah.jpg";
-import grenadaImg from "../../images/Grenada.jpg";
-import yellowstoneImg from "../../images/Yellowstone.jpg";
-import castleImg from "../../images/Castle.JPG";
+} from './styled';
+import img from '../../images/chevron.png';
+import moabImg from '../../images/utah.jpg';
+import grenadaImg from '../../images/Grenada.jpg';
+import yellowstoneImg from '../../images/Yellowstone.jpg';
+import castleImg from '../../images/Castle.JPG';
+
+const travels = [
+    {
+    img: yellowstoneImg,
+    destin: "Yellowstone"
+    },
+    {
+    img: grenadaImg,
+    destin: "Spain"
+    },
+    {
+        img: castleImg,
+        destin: "England"
+    },
+    {
+    img: moabImg,
+    destin: "Utah"
+    }
+];
 
 class MyTravels extends React.Component {
 
     state = {
         photoIndex: 0,
         isOpen: false,
-        travels: [
-            {
-            img: yellowstoneImg,
-            destin: "Yellowstone"
-            },
-            {
-            img: grenadaImg,
-            destin: "Spain"
-            },
-            {
-                img: castleImg,
-                destin: "England"
-            },
-            {
-            img: moabImg,
-            destin: "Utah"
-            }
-        ]
     }
 
     renderCards = () => {
-        return this.state.travels.map((travel, index) => {
+        return travels.map((travel, index) => {
             return (
             <Column key={index} lg="6" md="6" sm="6" xs="12" style={{marginBottom: "90px"}}>
                 <Bounce bottom>

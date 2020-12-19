@@ -1,7 +1,7 @@
-import React from "react";
-import Bounce from "react-reveal/Bounce";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import React from 'react';
+import Bounce from 'react-reveal/Bounce';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import { 
     Container, 
     Row, 
@@ -11,56 +11,57 @@ import {
     Icon,
     ImgDiv,
     Img
-} from "./styled";
-import img from "../../images/chevron.png";
-import horseImg from "../../images/Horse.JPG";
-import horsetwoImg from "../../images/Horsetwo.JPG";
-import coachImg from "../../images/Coach.JPG";
-import skiImg from "../../images/Ski.JPG";
-import notredameImg from "../../images/NotreDame.JPG";
-import tetonImg from "../../images/Teton.jpg";
-import skiwaterImg from "../../images/Skiwater.JPG";
-import buffaloImg from "../../images/Buffalo.JPG";
-import bakeImg from "../../images/Bake.JPG";
+} from './styled';
+import img from '../../images/chevron.png';
+import horseImg from '../../images/Horse.JPG';
+import horsetwoImg from '../../images/Horsetwo.JPG';
+import coachImg from '../../images/Coach.JPG';
+import skiImg from '../../images/Ski.JPG';
+import notredameImg from '../../images/NotreDame.JPG';
+import tetonImg from '../../images/Teton.jpg';
+import skiwaterImg from '../../images/Skiwater.JPG';
+import buffaloImg from '../../images/Buffalo.JPG';
+import bakeImg from '../../images/Bake.JPG';
+
+const hobbies = [
+    {
+    img: horseImg
+    },
+    {
+    img: horsetwoImg
+    },
+    {
+    img: skiImg
+    },
+    {
+    img: notredameImg
+    },
+    {
+    img: tetonImg
+    },
+    {
+    img: skiwaterImg
+    },
+    {
+    img: bakeImg
+    },
+    {
+    img: coachImg
+    },
+    {
+    img: buffaloImg
+    }
+]
 
 class MyHobbies extends React.Component {
 
     state = {
         photoIndex: 0,
         isOpen: false,
-        hobbies: [
-            {
-            img: horseImg
-            },
-            {
-            img: horsetwoImg
-            },
-            {
-            img: skiImg
-            },
-            {
-            img: notredameImg
-            },
-            {
-            img: tetonImg
-            },
-            {
-            img: skiwaterImg
-            },
-            {
-            img: bakeImg
-            },
-            {
-            img: coachImg
-            },
-            {
-            img: buffaloImg
-            }
-        ]
     }
 
     renderCards = () => {
-        return this.state.hobbies.map((hobby, index) => {
+        return hobbies.map((hobby, index) => {
             return (
             <Column key={index} lg="4" md="6" sm="6" xs="12" style={{marginBottom: "25px"}}>
                 <Bounce bottom>
@@ -89,14 +90,14 @@ class MyHobbies extends React.Component {
     ]
 
     const descrip = [
-        "Riding and training horses is a big part of my life. It is a pastime that requires dedication and patience, but is very rewarding in the end.",
-        "Horses are a big part of my life, and the family just loves to hangout at the pasture as much as we can.",
+        'Riding and training horses is a big part of my life. It is a pastime that requires dedication and patience, but is very rewarding in the end.',
+        'Horses are a big part of my life, and the family just loves to hangout at the pasture as much as we can.',
         "Growing up in the Rocky Mountains, it is tough to not take up skiing. I'm no exception and have been skiing since the age of 3.",
         "Traveling is a big part of my life but why? It's mostly due to history and culture. I love to study history, and go places where it is palpable.",
-        "Hiking is secondary to riding horses, but another great hobby is hiking to the top of the Tetons.",
-        "Again, skiing is in my DNA. If I had to choose a preferred type though, it would be water skiing everytime.",
+        'Hiking is secondary to riding horses, but another great hobby is hiking to the top of the Tetons.',
+        'Again, skiing is in my DNA. If I had to choose a preferred type though, it would be water skiing everytime.',
         "My wife and I love to bake and cook. From various authentic Mexican dishes, to good ol'fashioned cherry pie, we are in the kitchen a lot.",
-        "Both playing and teaching sports is an important pastime. Coaching little ones is especially fun.",
+        'Both playing and teaching sports is an important pastime. Coaching little ones is especially fun.',
         "I love to to be in nature, and especially spot wildlife. It's a hobby I find both relaxing and educational."
     ]
 

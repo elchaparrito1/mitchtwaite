@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import {
     Header, 
@@ -8,9 +8,9 @@ import {
     ParentDiv,
     ChildDiv,
     Line
-} from "../ParallaxComponent/styled";
-import Navbar from "../Navbar/Navbar";
-import { Parallax } from "react-parallax";
+} from '../ParallaxComponent/styled';
+import Navbar from '../Navbar/Navbar';
+import { Parallax } from 'react-parallax';
 
 
 // import backVid from "../../videos/Background.mov"

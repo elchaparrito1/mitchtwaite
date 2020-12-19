@@ -1,11 +1,11 @@
-import React from "react";
-import EmailMe from "../MyContacts/EmailMe";
-import CallMe from "../MyContacts/CallMe";
-import Bounce from "react-reveal/Bounce";
-import axios from "axios";
-import Chatkit from "@pusher/chatkit-client";
-// import ChatWidget from "../../components/ChatWidget/ChatWidget";
-// import DialogModal from "../Modals/DialogModal";
+import React from 'react';
+import EmailMe from '../MyContacts/EmailMe';
+import CallMe from '../MyContacts/CallMe';
+import Bounce from 'react-reveal/Bounce';
+import axios from 'axios';
+import Chatkit from '@pusher/chatkit-client';
+// import ChatWidget from '../../components/ChatWidget/ChatWidget';
+// import DialogModal from '../Modals/DialogModal';
 import {
     Row,
     Column,
@@ -16,27 +16,27 @@ import {
     // Head,
     // Text,
     // Loader
-} from "./styled";
-var moment = require("moment-timezone");
+} from './styled';
+var moment = require('moment-timezone');
 
 
 
 class MyContacts extends React.Component {
     state = {
-        time: moment().tz("America/Denver").format("h:mm:ss a"),
+        time: moment().tz('America/Denver').format('h:mm:ss a'),
         day: new Date().getDay(),
         currentUser: null,
         currentRoom: null,
-        newMessage: "",
+        newMessage: '',
         messages: [],
         isLoading: false,
-        userId: "",
+        userId: '',
         isDialogOpen: false
     }
 
     componentDidMount() {
         this.interval = setInterval(() => this.setState({ 
-            time: moment().tz("America/Denver").format("h:mm:ss a"),
+            time: moment().tz('America/Denver').format('h:mm:ss a'),
             day: new Date().getDay()
         }), 1000);
     }
@@ -70,7 +70,7 @@ class MyContacts extends React.Component {
           event.preventDefault();
           const { newMessage, currentUser, currentRoom } = this.state;
       
-          if (newMessage.trim() === "") return;
+          if (newMessage.trim() === '') return;
       
           currentUser.sendMessage({
             text: newMessage,
@@ -78,7 +78,7 @@ class MyContacts extends React.Component {
           });
       
           this.setState({
-            newMessage: ""
+            newMessage: ''
           });
         }
         
@@ -114,7 +114,7 @@ class MyContacts extends React.Component {
     addSupportStaffToRoom = () => {
         const { currentRoom, currentUser } = this.state;
         return currentUser.addUserToRoom({
-          userId: "support",
+          userId: 'support',
           roomId: currentRoom.id
         });
       };
@@ -143,17 +143,17 @@ class MyContacts extends React.Component {
           const { userId } = this.state;
   
           if (userId === null || userId.trim() === "") {
-            alert("Invalid userId");
+            alert('Invalid userId');
           } else {
             axios
-              .post("https://yellowstone.herokuapp.com/users", { userId })
+              .post('https://yellowstone.herokuapp.com/users', { userId })
               .then(() => {
                 const tokenProvider = new Chatkit.TokenProvider({
-                  url: "https://yellowstone.herokuapp.com/authenticate"
+                  url: 'https://yellowstone.herokuapp.com/authenticate'
                 });
   
                 const chatManager = new Chatkit.ChatManager({
-                  instanceLocator: "v1:us1:f1cbf8e9-3cc8-4abe-8013-6f535f84c39f",
+                  instanceLocator: 'v1:us1:f1cbf8e9-3cc8-4abe-8013-6f535f84c39f',
                   userId,
                   tokenProvider
                 });
@@ -176,25 +176,25 @@ class MyContacts extends React.Component {
        let day;
        switch (num) {
         case 0:
-        day = "Sunday";
+        day = 'Sunday';
         break;
       case 1:
-        day = "Monday";
+        day = 'Monday';
         break;
       case 2:
-        day = "Tuesday";
+        day = 'Tuesday';
         break;
       case 3:
-        day = "Wednesday";
+        day = 'Wednesday';
         break;
       case 4:
-        day = "Thursday";
+        day = 'Thursday';
         break;
       case 5:
-        day = "Friday";
+        day = 'Friday';
         break;
       case  6:
-        day = "Saturday";
+        day = 'Saturday';
         break;
       default: 
         day = "I don't know what day it is!";

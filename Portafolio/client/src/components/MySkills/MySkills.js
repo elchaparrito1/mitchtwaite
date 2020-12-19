@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Bounce from "react-reveal/Bounce";
+import React, { Component } from 'react';
+import Bounce from 'react-reveal/Bounce';
 import { 
     Container,
     Column,
@@ -7,21 +7,21 @@ import {
     Row,
     Text,
     Icon
-} from "./styled";
+} from './styled';
 
-import imgChevron from "../../images/chevron.png";
-import imgCSS from "../../images/css-3.png";
-import imgHTML from "../../images/html-5.png";
-import imgJS from "../../images/javascript.png";
-import imgReact from "../../images/react.png";
-import imgNode from "../../images/node.png";
-import imgExpress from "../../images/express.svg";
-import imgMongo from "../../images/mongodb.png";
-import imgWP from "../../images/wordpress.png";
-import imgJAM from "../../images/jam.png";
-import imghbs from "../../images/hbs.png";
-import imgstyed from "../../images/styled-components.png";
-import imgNextjs from "../../images/nextjs.png";
+import imgChevron from '../../images/chevron.png';
+import imgCSS from '../../images/css-3.png';
+import imgHTML from '../../images/html-5.png';
+import imgJS from '../../images/javascript.png';
+import imgReact from '../../images/react.png';
+import imgNode from '../../images/node.png';
+import imgExpress from '../../images/express.svg';
+import imgMongo from '../../images/mongodb.png';
+import imgWP from '../../images/wordpress.png';
+import imgJAM from '../../images/jam.png';
+import imghbs from '../../images/hbs.png';
+import imgstyed from '../../images/styled-components.png';
+import imgNextjs from '../../images/nextjs.png';
 
 class Skills extends Component {
 
@@ -31,51 +31,51 @@ class Skills extends Component {
             
             {
                 img: imgJS,
-                name: "JavaScript"
+                name: 'JavaScript'
             },
             {
                 img: imgReact,
-                name: "ReactJS"
+                name: 'ReactJS'
             },
             {
                 img: imgNextjs,
-                name: "Next JS"
+                name: 'Next JS'
             },
             {
                 img: imgNode,
-                name: "NodeJS"
+                name: 'NodeJS'
             },
             {
                 img: imgWP,
-                name: "WordPress"
+                name: 'WordPress'
             },
             {
                 img: imgJAM,
-                name: "JAMstack"
+                name: 'JAMstack'
             },
             {
                 img: imghbs,
-                name: "Handlebars"
+                name: 'Handlebars'
             },
             {
                 img: imgstyed,
-                name: "CSS-in-JS"
+                name: 'CSS-in-JS'
             },
             {
                 img: imgExpress,
-                name: "ExpressJS"
+                name: 'ExpressJS'
             },
              {
                 img: imgMongo,
-                name: "MongoDB"
+                name: 'MongoDB'
             },
             {
                 img: imgHTML,
-                name: "HTML5"
+                name: 'HTML5'
             },
             {
                 img: imgCSS,
-                name: "CSS3"
+                name: 'CSS3'
             },
         ]
     }

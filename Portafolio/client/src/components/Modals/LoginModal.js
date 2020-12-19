@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {
     Row, 
     Column, 
@@ -10,7 +10,7 @@ import {
     ModalBody, 
     Button,
     P
-} from "./styled";
+} from './styled';
 
 class LoginModal extends React.Component {
 
@@ -51,7 +51,7 @@ class LoginModal extends React.Component {
                 </ModalFooter>
             </ModalContent>
         </Modal>,
-        document.querySelector("#modal")
+        document.querySelector('#modal')
     )
   };
 };

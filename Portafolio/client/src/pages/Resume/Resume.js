@@ -1,8 +1,8 @@
-import React from "react";
-import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
-import { PhantomWrapper } from "./styled";
-import MyResume from "../../components/MyResume/MyResume";
+import React from 'react';
+import Footer from '../../components/Footer/Footer';
+import Navbar from '../../components/Navbar/Navbar';
+import { PhantomWrapper } from './styled';
+import MyResume from '../../components/MyResume/MyResume';
 
 
 class Resume extends React.Component {
@@ -11,31 +11,30 @@ class Resume extends React.Component {
         super(props)
         this.footerRef = React.createRef();
         this.state = {
-            measurement: ""
+            measurement: ''
         }
     }
     
     componentDidMount() {
-        window.scrollTo(0, 0);
         let measurement = this.footerRef.current.offsetTop;
-        console.log(`Measurement: ${measurement}`)
+        // console.log(`Measurement: ${measurement}`)
         this.setState({
             measurement: measurement
         })
     }
     
     render() {
-    return (
-        <PhantomWrapper>
-            <Navbar/>
-                <MyResume 
-                measurement={this.state.measurement}
-                />
-                <div ref={this.footerRef}>
-                    <Footer/>
-                </div>
-        </PhantomWrapper>
-     )
+        return (
+            <PhantomWrapper>
+                <Navbar/>
+                    <MyResume 
+                    measurement={this.state.measurement}
+                    />
+                    <div ref={this.footerRef}>
+                        <Footer/>
+                    </div>
+            </PhantomWrapper>
+        )
     }
 };
 

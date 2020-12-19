@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { 
     Container, 
     Row, 
@@ -6,8 +6,8 @@ import {
     Text, 
     ChildDiv,
     Icon
-} from "./styled";
-import img from "../../images/chevron.png";
+} from './styled';
+import img from '../../images/chevron.png';
 
 const MyInterests = () => {
     return (

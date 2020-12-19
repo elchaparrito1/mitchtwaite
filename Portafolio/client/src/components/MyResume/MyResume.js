@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
     MyContainer,
     Container, 
@@ -12,10 +12,10 @@ import {
     Photo,
     Icon,
     A
-} from "./styled";
-import imgProfile from "../../images/profile.png";
-import imgPrint from "../../images/printer.png";
-import Flip from "react-reveal/Flip";
+} from './styled';
+import imgProfile from '../../images/profile.png';
+import imgPrint from '../../images/printer.png';
+import Flip from 'react-reveal/Flip';
 
 
 class MyResume extends Component {
@@ -23,55 +23,55 @@ class MyResume extends Component {
         state = {
             work: [
                 {
-                    title: "Freelance Software Developer",
-                    company: "self-employed",
-                    timeline: "Mar 2019 - Present",
+                    title: 'Freelance Software Developer',
+                    company: 'self-employed',
+                    timeline: 'Mar 2019 - Present',
                     description: "As my portfolio reflects, I've been able to work on a varied array of projects for clients. I've primarily built applications using the MERN stack, but I've also had unique opportunities to build web crawlers, and follow JAMstack theory in creating WordPress CMS backends with ReactJS frontends. I've worked hard to assess each client's vision, and build a custom design to suit their needs."
                 },
                 {
-                    title: "Software Developer",
-                    company: "Foursteps",
-                    timeline: "Jun 2019 - Nov 2019",
-                    description: "I work as a React developer to help the company with migrating the code stack from Flask to ReactJS. With a large amount of legacy code, my responsibilities include a careful review of the old code to determine how best it can be converted over to ReactJS, using best React practices. I then style the converted code utilizing CSS-in-JS principles."
+                    title: 'Software Developer',
+                    company: 'Foursteps',
+                    timeline: 'Jun 2019 - Nov 2019',
+                    description: 'I work as a React developer to help the company with migrating the code stack from Flask to ReactJS. With a large amount of legacy code, my responsibilities include a careful review of the old code to determine how best it can be converted over to ReactJS, using best React practices. I then style the converted code utilizing CSS-in-JS principles.'
                 },
                 {
-                    title: "Manager of Regulatory Affairs",
-                    company: "USANA Health Sciences Inc.:",
-                    timeline: "2015 – Present",
-                    description: "I work to ensure that project direction is followed, and deadlines are met. It is a fast-paced environment that requires reacting to constant change and dealing with many other departments. More importantly, I supervise the work of others to help them meet their goals and grow in experience and ability."
+                    title: 'Manager of Regulatory Affairs',
+                    company: 'USANA Health Sciences Inc.:',
+                    timeline: '2015 – Present',
+                    description: 'I work to ensure that project direction is followed, and deadlines are met. It is a fast-paced environment that requires reacting to constant change and dealing with many other departments. More importantly, I supervise the work of others to help them meet their goals and grow in experience and ability.'
                 },
                 {
-                    title: "Foreign Service Institute Portuguese and Spanish Administrator",
-                    company: "U.S. Department of State:",
-                    timeline: "Sep 2014 – Nov 2014",
-                    description: "I worked on an internal application to help add audio files to a single page on the Institute’s training website. I worked with the development team to get the right files compressed and added to the server. I then utilized HTML and CSS to provide the layout and style of the page for diplomats to navigate and use audio files. I had to obtain a security clearance in order to access the institute’s internal system."
+                    title: 'Foreign Service Institute Portuguese and Spanish Administrator',
+                    company: 'U.S. Department of State:',
+                    timeline: 'Sep 2014 – Nov 2014',
+                    description: 'I worked on an internal application to help add audio files to a single page on the Institute’s training website. I worked with the development team to get the right files compressed and added to the server. I then utilized HTML and CSS to provide the layout and style of the page for diplomats to navigate and use audio files. I had to obtain a security clearance in order to access the institute’s internal system.'
                 },
                 
             ],
-            position: "",
-            top: ""
+            position: '',
+            top: ''
         }
 
 
     componentDidMount = () => {
-        window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
     };
     
     componentWillUnmount = () => {
-        window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll);
     };
     
     handleScroll = () =>  {
-        console.log(window.scrollY, this.props.measurement - window.innerHeight)
+        // console.log(window.scrollY, this.props.measurement - window.innerHeight)
         if (window.scrollY > this.props.measurement - window.innerHeight && window.innerWidth > 993) {
             this.setState({
-                position: "relative",
-                top: this.props.measurement - window.innerHeight + "px"
+                position: 'relative',
+                top: this.props.measurement - window.innerHeight + 'px'
             });
         } else {
             this.setState({
-                position: "",
-                top: ""
+                position: '',
+                top: ''
             });
         }
     };

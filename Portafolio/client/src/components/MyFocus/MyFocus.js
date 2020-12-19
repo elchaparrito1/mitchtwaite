@@ -45,6 +45,6 @@ const MyFocus = () => {
         
     </div>
     )
-}
+};
 
 export default MyFocus;
