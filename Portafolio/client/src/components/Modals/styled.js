@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -18,7 +18,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -94,7 +94,7 @@ export const Button = styled.button`
     color: black;
     cursor: pointer;
     float: right;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
 
     :hover {
         color: #003366;
@@ -122,7 +122,7 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -139,7 +139,7 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -156,11 +156,11 @@ export const TextArea = styled.textarea`
 `;
 
 export const Label = styled.label`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
 `;
 
 export const P = styled.p`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 20px;
-    color: ${props => props.error ? "red" : "black"}
+    color: ${props => props.error ? 'red' : 'black'}
 `;

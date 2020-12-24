@@ -28,8 +28,8 @@ const travels = [
     destin: "Spain"
     },
     {
-        img: castleImg,
-        destin: "England"
+    img: castleImg,
+    destin: "England"
     },
     {
     img: moabImg,
@@ -72,10 +72,10 @@ class MyTravels extends React.Component {
     ]
 
     const descrip = [
-        "The best destination in the lower fifty is without a doubt Yellowstone National Park. It is my second home. Personally I've made 25 visits to the park and still going strong!",
-        "Ah but there is no place like Spain. It has it all; history, architecture, bullfights, food, and Real Madrid! Its crowning glory is the Alhambra, which is the beautiful structure behind me in this photo.",
-        "England is an amazing destination. Full of history, and well-preserved architecture, it is hard to be a little jealous of a place where castles pepper the countryside.",
-        "As they say though, there's no place quite like home. Utah is full of beautiful and fun destinations. Southern Utah is a favorite of mine."
+        'The best destination in the lower fifty is without a doubt Yellowstone National Park. It is my second home. Personally I\'ve made 25 visits to the park and still going strong!',
+        'Ah but there is no place like Spain. It has it all; history, architecture, bullfights, food, and Real Madrid! Its crowning glory is the Alhambra, which is the beautiful structure behind me in this photo.',
+        'England is an amazing destination. Full of history, and well-preserved architecture, it is hard to be a little jealous of a place where castles pepper the countryside.',
+        'As they say though, there\'s no place quite like home. Utah is full of beautiful and fun destinations. Southern Utah is a favorite of mine.'
     ]
 
     return (

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Flex = styled.div`
     display: flex;
@@ -16,7 +16,7 @@ export const Flex = styled.div`
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -32,7 +32,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -49,7 +49,7 @@ export const Column = styled.div`
 `;
 
 export const Box = styled.div`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 5px;
     height: 360px;
@@ -134,7 +134,7 @@ export const Text = styled.p`
     font-size: 1.5em;
     text-align: center;
     vertical-align: center;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         font-size: 1.2em;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // import { createGlobalStyle } from 'styled-components'
 
@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -27,7 +27,7 @@ function getWidthString(span) {
 export const Column = styled.div`
     float: left;
     margin: 0 auto;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -51,24 +51,24 @@ export const PhantomWrapper = styled.div`
 
 export const Text = styled.h1`
     color: black;
-    font-family: "Lato", Helvetica, sans-serif;
-    font-size: ${props => props.bod ? "1.6em" : "2.5em"};
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: ${props => props.bod ? '1.6em' : '2.5em'};
     margin: 0 auto;
     text-align: center;
     width: 50%;
 
     @media only screen and (max-width: 320px) {
-        font-size: ${props => props.bod ? "1.2em" : "1.8em"};
+        font-size: ${props => props.bod ? '1.2em' : '1.8em'};
         width: 90%
     }
 
     @media only screen and (min-width: 321px) and (max-width: 767px) {
-        font-size: ${props => props.bod ? "1.3em" : "1.8em"};
+        font-size: ${props => props.bod ? '1.3em' : '1.8em'};
         width: 90%
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: ${props => props.bod ? "1.5em" : "2.3em"};
+        font-size: ${props => props.bod ? '1.5em' : '2.3em'};
         width: 90%
     }
 

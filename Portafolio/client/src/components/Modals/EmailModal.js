@@ -23,8 +23,12 @@ export default function EmailModal(props) {
         email: '',
         name: '',
         message: ''
-    })
-    const [sent, setSent] = useState('');
+    });
+
+    const [sendStatus, setStatus] = useState({
+        status: '',
+        error: false
+    });
 
     const handleChange = (e) => {
         setEmailInfo({
@@ -48,31 +52,45 @@ export default function EmailModal(props) {
         }
   
         if (!validateEmail(emailInfo.email)) {
-            setSent('invalid email');
+            setStatus({
+                status: 'Please enter a valid email address', 
+                error: true
+            });
         } else if (emailInfo.name === '' || emailInfo.email === '' || emailInfo.message === '') {
-            setSent('missing information');
+            setStatus({
+                status: 'Please fill in all fields', 
+                error: true
+            });
         } else { 
-            setSent('sending');
+            setStatus({
+                status: 'Sending...', 
+                error: false
+            });
             API.sendMessage(emailObj)
               .then(response => {
-                //   console.log(response.data);
+                  console.log(response)
                   if (response.data === 'email sent') {
-                      setSent('email sent');
-                      setEmailInfo({email: '', name: '', message: ''});
-                    //   setTimeout(props.handleModal, 3000);
+                    setStatus({
+                        status: 'Message sent!', 
+                        error: false
+                    });
+                      setTimeout(() => closeModal(), 3000);
                   } else if (response.data === 'error') {
-                    setSent('error occurred; email not sent');
-                } 
+                    throw new Error();
+                  }
               })
-              .catch(error => {
-                  console.log(error.data);
+              .catch(e => {
+                setStatus({
+                    status: 'Error occurred; close modal to try again', 
+                    error: true
+                });
               });
         };
     };
 
     const closeModal = () => {
         setEmailInfo({email: '', name: '', message: ''});
-        setSent('');
+        setStatus('');
         props.handleModal();
     }
 
@@ -120,31 +138,23 @@ export default function EmailModal(props) {
                                 />
                             </form>
                         </ModalBody>
-                    <ModalFooter>       
-                {sent === "sending" && (
+                    <ModalFooter> 
+                    {sendStatus.error ? 
                     <Row>
-                    <Column lg="12" md="12" sm="12" xs="12">
-                        <P>Sending...</P>
-                    </Column>
-                </Row>)}
-                {sent === "email sent" && (
-                    <Row>
-                    <Column lg="12" md="12" sm="12" xs="12">
-                        <P>Message Sent!</P>
-                    </Column>
-                </Row>)}
-                {sent === "invalid email" && (
-                    <Row>
-                    <Column lg="12" md="12" sm="12" xs="12">
-                        <P error >Please enter a valid email address</P>
-                    </Column>
-                </Row>)}
-                {sent === "missing information" && (
-                <Row>
-                    <Column lg="12" md="12" sm="12" xs="12">
-                        <P error >Please fill in all fields</P>
-                    </Column>
-                </Row>)}
+                        <Column lg="12" md="12" sm="12" xs="12">
+                            <P error>
+                                {sendStatus.status}
+                            </P>
+                        </Column>
+                    </Row>
+                     :
+                     <Row>
+                        <Column lg="12" md="12" sm="12" xs="12">
+                            <P>
+                                {sendStatus.status}
+                            </P>
+                        </Column>
+                    </Row>}      
                 <Row>
                     <Column lg="12" md="12" sm="12" xs="12">
                         <Button onClick={sendEmail}>Send</Button>

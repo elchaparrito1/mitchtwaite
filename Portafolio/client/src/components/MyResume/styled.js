@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
-    margin-bottom: ${props => props.break ? "100px" : ""};
+    margin-bottom: ${props => props.break ? '100px' : ''};
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
         margin-top: 0px;
-        margin-bottom: ${props => props.break ? "30px" : ""};
+        margin-bottom: ${props => props.break ? '30px' : ''};
     }
 
 `;
@@ -25,8 +25,8 @@ function getWidthString(span) {
 export const Column = styled.div`
     float: left;
     margin: 0 auto;
-    height: ${props => props.container ? "400px" : ""};
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    height: ${props => props.container ? '400px' : ''};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
     
 
     @media only screen and (min-width: 768px) {
@@ -162,7 +162,7 @@ export const Icon = styled.img`
 
 export const A = styled.a`
     color: #0000FF;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 1.5em;
 
     :hover {
@@ -185,7 +185,7 @@ export const A = styled.a`
 
 export const Li = styled.li`
     color: gray;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 1.3em;
     list-style: none;
     margin: 10px;
@@ -215,7 +215,7 @@ export const Li = styled.li`
 `;
 
 export const Th = styled.th`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     margin: 2px;
 
     @media only screen and (min-width: 767px) and (max-width: 992px) {
@@ -232,13 +232,13 @@ export const Th = styled.th`
 `;
 
 export const Text = styled.h1`
-    color: ${props => props.header ? "gray" : "black"};
-    font-family: "Lato", Helvetica, sans-serif;
-    font-size: ${props => props.header ? "2.5em" : "2em"};
+    color: ${props => props.header ? 'gray' : 'black'};
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: ${props => props.header ? '2.5em' : '2em'};
     margin: 0 auto;
     text-align: center;
     width: 50%;
-    margin-top: ${props => props.header ? "50px" : "60px"};
+    margin-top: ${props => props.header ? '50px' : '60px'};
 `;
 
 export const TextHeader = styled(Text)`
@@ -261,33 +261,33 @@ export const TextHeader = styled(Text)`
 `;
 
 export const P = styled.p`
-    color: ${props => props.heading ? "black" : "gray"};
-    font-family: "Lato", Helvetica, sans-serif;
+    color: ${props => props.heading ? 'black' : 'gray'};
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 1.5em;
     text-align: left;
-    width: ${props => props.indent ? "95%" : "100%"};
-    margin-left: ${props => props.indent ? "30px" : ""};
+    width: ${props => props.indent ? '95%' : '100%'};
+    margin-left: ${props => props.indent ? '30px' : ''};
     
 
     @media only screen and (min-width: 320px) and (max-width: 766px) {
-        font-size: ${props => props.heading ? "1.1em" : "1em"};
+        font-size: ${props => props.heading ? '1.1em' : '1em'};
         width: 90%;
-        text-align: "left";
+        text-align: 'left';
         margin: 0 auto;
         
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1224px) {
-        font-size: ${props => props.heading ? "1.3em" : "1.2em"};
+        font-size: ${props => props.heading ? '1.3em' : '1.2em'};
         width: 90%;
-        text-align: "left";
+        text-align: 'left';
         margin: 0 auto;
     }
 
     @media only screen and (min-width: 1225px) and (max-width: 1400px) {
-        font-size: ${props => props.heading ? "1.5em" : "1.3em"};
+        font-size: ${props => props.heading ? '1.5em' : '1.3em'};
         width: 90%;
-        text-align: "left";
+        text-align: 'left';
         margin: 0 auto;
     }
 `;

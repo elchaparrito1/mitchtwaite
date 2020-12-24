@@ -40,7 +40,7 @@ export default function Navbar() {
 
     const hamburgerChoice = () => {
         const locale = window.location.href;
-        if (locale.split("/").pop() === "") {
+        if (locale.split('/').pop() === '') {
             return (
                 <div>
                 <Link to="/"><SideLinks ham-link>Home</SideLinks></Link>

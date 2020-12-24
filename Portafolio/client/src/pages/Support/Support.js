@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Chatkit from "@pusher/chatkit-client";
-import LoginModal from "../../components/Modals/LoginModal";
-import API from "../../utils/API";
-import "./Support.css";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Chatkit from '@pusher/chatkit-client';
+import LoginModal from '../../components/Modals/LoginModal';
+import API from '../../utils/API';
+import './Support.css';
 
   class Support extends Component {
 
       state = {
         currentUser: null,
         currentRoom: null,
-        newMessage: "",
+        newMessage: '',
         messages: [],
         rooms: [],
-        password: "",
+        password: '',
         isOpen: true,
-        login: ""
+        login: ''
       };
 
       handleModal = () => {
@@ -50,12 +50,12 @@ import "./Support.css";
         }
         API.checkPassword(password)
           .then(response => {
-            if (response.data === "incorrect password") {
+            if (response.data === 'incorrect password') {
               this.setState({
-                password: "",
-                login: "incorrect password"
+                password: '',
+                login: 'incorrect password'
               })
-            } else if (response.data === "correct password") {
+            } else if (response.data === 'correct password') {
               this.setState({
                 isOpen: false
               });
@@ -67,7 +67,7 @@ import "./Support.css";
           event.preventDefault();
           const { newMessage, currentUser, currentRoom } = this.state;
       
-          if (newMessage.trim() === "") return;
+          if (newMessage.trim() === '') return;
       
           currentUser.sendMessage({
             text: newMessage,
@@ -75,7 +75,7 @@ import "./Support.css";
           });
       
           this.setState({
-            newMessage: ""
+            newMessage: ''
           });
       }
           
@@ -102,17 +102,17 @@ import "./Support.css";
 
 
       componentDidMount() {
-        const userId = "support";
+        const userId = 'support';
 
         axios
-          .post("/users", { userId })
+          .post('/users', { userId })
           .then(() => {
             const tokenProvider = new Chatkit.TokenProvider({
-              url: "https://yellowstone.herokuapp.com/authenticate"
+              url: 'https://yellowstone.herokuapp.com/authenticate'
             });
 
             const chatManager = new Chatkit.ChatManager({
-              instanceLocator: "v1:us1:f1cbf8e9-3cc8-4abe-8013-6f535f84c39f",
+              instanceLocator: 'v1:us1:f1cbf8e9-3cc8-4abe-8013-6f535f84c39f',
               userId,
               tokenProvider
             });
@@ -162,7 +162,7 @@ import "./Support.css";
 
         const RoomList = rooms.map(room => {
           const isActive =
-            currentRoom && currentRoom.id === room.id ? "active" : "";
+            currentRoom && currentRoom.id === room.id ? 'active' : '';
           return (
             <li
               key={room.id}
@@ -175,7 +175,7 @@ import "./Support.css";
         });
 
         const ChatSession = messages.map((message, index) => {
-          const user = message.senderId === currentUser.id ? "support" : "user";
+          const user = message.senderId === currentUser.id ? 'support' : 'user';
           return (
             <span key={index} className={`${user} message`}>
               {message.text}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { 
     Container, 
     Row, 
@@ -6,9 +6,9 @@ import {
     Text, 
     ChildDiv,
     Icon
-} from "./styled";
-import img from "../../images/chevron.png";
-import responsiveImg from "../../images/responsive.gif";
+} from './styled';
+import img from '../../images/chevron.png';
+import responsiveImg from '../../images/responsive.gif';
 
 const MyFocus = () => {
     return (
@@ -27,7 +27,7 @@ const MyFocus = () => {
                 </Row>
                 <Row>
                     <Column lg="12" md="12" sm="12" xs="12">
-                        <Text body>I'm an aspiring software developer. I have a passion for problem solving, responsive front-end design, and careful logic.</Text>
+                        <Text body>Welcome to my site. I'm a software developer with a passion for problem solving, responsive front-end design, and careful logic.</Text>
                     </Column>
                 </Row>
                 <Row>

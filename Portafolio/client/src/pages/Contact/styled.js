@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -18,7 +18,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};

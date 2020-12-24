@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -18,7 +18,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -40,7 +40,7 @@ export const Button = styled.button`
     color: black;
     height: 50px;
     font-size: 1.1em;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
 
     :hover {
         color: #003366;
@@ -64,7 +64,7 @@ export const Button = styled.button`
 `;
 
 export const H2 = styled.h2`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 18px;
     margin-bottom: 0;
     color: white;
@@ -111,7 +111,7 @@ export const ChatBody = styled.section`
 
 export const MessageInput = styled.input`
     border-radius: 0;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     border: none;
     height: 50px;
     padding: 20px;

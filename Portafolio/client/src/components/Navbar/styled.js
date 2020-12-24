@@ -1,10 +1,10 @@
-import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import styled from 'styled-components';
+// import { Link } from 'react-router-dom';
 
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -20,7 +20,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -39,9 +39,9 @@ export const Column = styled.div`
 export const Pages = styled.th`
     color: black;
     float: right;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     font-size: 20px;
-    margin: ${props => props.contact ? "25px 100px 0 0" : "25px 30px 0 0"};
+    margin: ${props => props.contact ? '25px 100px 0 0' : '25px 30px 0 0'};
     position: relative;
     text-decoration: none;
     z-index: 1;
@@ -50,12 +50,16 @@ export const Pages = styled.th`
 
 export const SideLinks =  styled.button`
     color: white;
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     display: inline-block;
-    margin-top: ${props => props.resume ? "30px" : ""};
+    margin-top: ${props => props.resume ? '30px' : ''};
     background: none;
     border: none;
     outline: none;
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 export const Links = styled(SideLinks)`
@@ -73,7 +77,6 @@ export const Links = styled(SideLinks)`
     :hover {
         color: white;
         opacity: 1;
-        cursor: pointer;
     }
 
     :hover::after {

@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import {} from "../Navbar/styled";
+import styled from 'styled-components';
+import {} from '../Navbar/styled';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -19,7 +19,7 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -52,37 +52,37 @@ export const ChildDiv = styled.div`
 
 export const Text = styled.h1`
     color: black;
-    font-family: "Lato", Helvetica, sans-serif;
-    font-size: ${props => props.header ? "3em" : "2em"};
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: ${props => props.header ? '3em' : '2em'};
     margin: 0 auto;
     text-align: center;
     width: 50%;
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: ${props => props.header ? "2em" : "1.4em"};
+        font-size: ${props => props.header ? '2em' : '1.4em'};
         width: 85%;
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: ${props => props.header ? "2.5em" : "2em"};
+        font-size: ${props => props.header ? '2.5em' : '2em'};
         width: 80%;
     }
     
 `;
 
 export const Icon = styled.img`
-    height: ${props => props.giphy ? "300px" : "50px"};
+    height: ${props => props.giphy ? '300px' : '50px'};
     margin: 10px 0 10px 0;
-    width: ${props => props.giphy ? "300px" : "50px"};
+    width: ${props => props.giphy ? '300px' : '50px'};
     
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        width: ${props => props.giphy ? "200px" : "30px"};
-        height: ${props => props.giphy ? "200px" : "30px"};
+        width: ${props => props.giphy ? '200px' : '30px'};
+        height: ${props => props.giphy ? '200px' : '30px'};
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        width: ${props => props.giphy ? "200px" : "40px"};
-        height: ${props => props.giphy ? "200px" : "40px"};
+        width: ${props => props.giphy ? '200px' : '40px'};
+        height: ${props => props.giphy ? '200px' : '40px'};
     }
 `;

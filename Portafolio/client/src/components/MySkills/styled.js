@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -18,8 +18,8 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    margin-bottom: ${props => props.skill ? "65px" : "0"};
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    margin-bottom: ${props => props.skill ? '65px' : '0'};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -50,37 +50,37 @@ export const ChildDiv = styled.div`
 `;
 
 export const Text = styled.h1`
-    color: ${props => props.skill ? "#003366" : "black"};
-    font-family: "Lato", Helvetica, sans-serif;
-    font-size: ${props => props.header ? "3em" : "2em"};
+    color: ${props => props.skill ? '#003366' : 'black'};
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: ${props => props.header ? '3em' : '2em'};
     margin: 0 auto;
     
     text-align: center;
     width: 50%;
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: ${props => props.header ? "2em" : "1.5em"};
+        font-size: ${props => props.header ? '2em' : '1.5em'};
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: ${props => props.header ? "2.5em" : "2em"};
+        font-size: ${props => props.header ? '2.5em' : '2em'};
     }
 
 `;
 
 export const Icon = styled.img`
-    height: ${props => props.chevron ? "50px" : "100px;"};
+    height: ${props => props.chevron ? '50px' : '100px;'};
     margin: 10px 0 10px 0;
-    width: ${props => props.chevron ? "50px" : "100px;"};
+    width: ${props => props.chevron ? '50px' : '100px;'};
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        height: ${props => props.chevron ? "30px" : "90px;"};
-        width: ${props => props.chevron ? "30px" : "90px;"};
+        height: ${props => props.chevron ? '30px' : '90px;'};
+        width: ${props => props.chevron ? '30px' : '90px;'};
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        height: ${props => props.chevron ? "40px" : "100px;"};
-        width: ${props => props.chevron ? "40px" : "100px;"};
+        height: ${props => props.chevron ? '40px' : '100px;'};
+        width: ${props => props.chevron ? '40px' : '100px;'};
     }
 `;
 

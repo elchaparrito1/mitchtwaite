@@ -13,39 +13,36 @@ import {
 } from './styled';
 import img from '../../images/chevron.png';
 import crawlerImg from '../../images/puppeteer.png';
-import tatuImg from '../../images/tatu.png';
+import soonImg from '../../images/soon.png';
 import hugoImg from '../../images/Hugo-LP.png';
 import pfnImg from '../../images/PFN.png';
 import './flexcard.css';
 
-const MyProjects = () => { 
+export default function MyProjects() { 
 
     const cards = [
             {
+                img: soonImg,
+                title: 'Soon',
+                descrip: 'Soon is an exciting startup whose landing page is built using React with Typescript. My primary tasks with the landing page have included my use of React knowledge to fix front-end bugs that were causing issues, and implementing technical optimizations to improve SEO.',
+                linkOne: 'https://soon.app/',
+            },
+            {
                 img: pfnImg,
                 title: 'Pace News',
-                descrip: 'Pace Football News is designed as a news aggregator website. The great thing about this site is the use of the JAMstack philosophy. Using a WordPress CMS, content is easily uploaded by the client to their WordPress environment. Then this content is fed through to the uniquely neumorphic frontend - built using NextJS for server-side rendering - to allow for a perfectly scalable/configurable/very-fast user experience.',
+                descrip: 'Pace Football News is designed as a news aggregator website. This site was built with the JAMstack philosphy in mind. Using a WordPress CMS, content is easily uploaded by the client to their WordPress environment. Then this content is fed through to the uniquely neumorphic frontend - built using NextJS for server-side rendering - to allow for a perfectly scalable/configurable/very-fast user experience.',
                 linkOne: 'https://www.pacefootballnews.com/',
-                linkTwo: 'https://github.com/elchaparrito1/PFN/tree/master/pfn'
             },
             {
                 img: hugoImg,
                 title: 'Hugo-LP Forum',
-                descrip: "Hugo-LP is an application built using MERN stack technologies. Namely Mongo DB, Express js, React js, and Node js. The client wanted a simple, yet modern-looking website that would be easy for prospective customers to navigate; find important information; or sign up for future forums. What I love about this site is the look and feel, but also the simple use of React and Javascript logic to meet the client's needs.",
+                descrip: "Hugo-LP is an application built using MERN stack technologies. Namely Mongo DB, Express js, React js, and Node js. The client wanted a simple, yet modern-looking website that would be easy for prospective customers to navigate; find important information; or sign up for future forums.",
                 linkOne: 'https://www.hugo-lpf.com/',
-                linkTwo: 'https://github.com/elchaparrito1/Hugo-LP-Forum'
             },
             {
                 img: crawlerImg,
                 title: 'News Crawler',
-                descrip: "In connection with the Pace News application, my client also wanted a quicker way to search news on the carefully chosen websites from which news is curated. The crawler(s) utilizes Google's Puppeteer to visit the selected websites from the client's list to scrape the desired news articles, which are then sent via nodemailer with a handlebars template to the client for review and use in the WP CMS. It is also important to follow each website's scraping policies, so a node package is used, which dynamically checks if the specified url is allowed for scraping.",
-            },
-            {
-                img: tatuImg,
-                title: 'Tatu',
-                descrip: 'This is a multi-user app built with the MERN stack (MongoDB, ExpressJS, NodeJS, ReactJS) with mobile first design. My part: CSS design on each page, built all front end components for the Home page, and modal functionality, built back end routes/controllers for the forgot password functionality. Technology used: React, React Router, Express, Express Session, bcrypt, NodeJS, MongoDB, Axios, APIs, React-Materialize and Google Fonts and Icons.',
-                linkOne: 'https://tatuappv2.herokuapp.com/',
-                linkTwo: 'https://github.com/penajtokyo/tatu'
+                descrip: "The Pace Football News creator also wanted a quicker way to search news and curate news from a list of preferred sites. The crawlers utilize Google's Puppeteer to visit the creator's list of sites to scrape the desired news articles, which are then sent via nodemailer with a handlebars template to an assigned email address. It is also important to follow each website's scraping policies, so a node package is used to dynamically check Robots.txt files.",
             }
         ];
 
@@ -73,7 +70,6 @@ const MyProjects = () => {
                                         <P>{card.descrip}</P> 
                                     <Boxtext>Links</Boxtext>
                                     <A href={card.linkOne} target="_blank"><strong>DEPLOYED APP</strong></A>
-                                    <A href={card.linkTwo} target="_blank"><strong>SOURCE CODE</strong></A>
                                 </div>
                             }  
                         </div>
@@ -106,5 +102,3 @@ const MyProjects = () => {
         </div>
     )
 };
-
-export default MyProjects;

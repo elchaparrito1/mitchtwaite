@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -17,8 +17,8 @@ function getWidthString(span) {
 
 export const Column = styled.div`
     float: left;
-    margin-bottom: ${props => props.myname ? "100px" : "20px"};
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    margin-bottom: ${props => props.myname ? '100px' : '20px'};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -64,16 +64,16 @@ export const ChildDiv = styled.div`
 export const Header = styled.h1`
     color: black;
     
-    font-size: ${props => props.primary ? "3em" : "5.5em"};
+    font-size: ${props => props.primary ? '3em' : '5.5em'};
     margin-bottom: 50px;
     text-align: center;
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: ${props => props.primary ? "1.8em" : "2.8em"};
+        font-size: ${props => props.primary ? '1.8em' : '2.8em'};
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: ${props => props.primary ? "4em" : "6em"};
+        font-size: ${props => props.primary ? '4em' : '6em'};
     }
     
 `;

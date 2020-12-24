@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Row = styled.div`
     &::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
@@ -19,7 +19,7 @@ function getWidthString(span) {
 export const Column = styled.div`
     float: left;
     margin: 0 auto;
-    ${({ xs }) => (xs ? getWidthString(xs) : "width: 100%")};
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
 
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
@@ -51,20 +51,20 @@ export const ChildDiv = styled.div`
 `;
 
 export const Text = styled.h1`
-    color: ${props => props.destination ? "#003366" : "black"};;
-    font-family: "Lato", Helvetica, sans-serif;
-    font-size: ${props => props.header ? "3em" : "2.2em"};
+    color: ${props => props.destination ? '#003366' : 'black'};;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: ${props => props.header ? '3em' : '2.2em'};
     margin: 0 auto;
     text-align: center;
     width: 50%;
-    margin-top: ${props => props.header ? "50px" : ""};
+    margin-top: ${props => props.header ? '50px' : ''};
 
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: ${props => props.header ? "2em" : "1.4em"};
+        font-size: ${props => props.header ? '2em' : '1.4em'};
     }
 
     @media only screen and (min-width: 767px) and (max-width: 1024px) {
-        font-size: ${props => props.header ? "2.5em" : "1.4em"};
+        font-size: ${props => props.header ? '2.5em' : '1.4em'};
         
     }
     
@@ -76,7 +76,7 @@ export const Boxtext = styled(Text)`
 `;
 
 export const P = styled.p`
-    font-family: "Lato", Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
     margin: 5px;
 `;
 
