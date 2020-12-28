@@ -39,7 +39,7 @@ export default function Footer() {
                         <tbody>
                             <tr>
                                 <th><Icon onClick={handleModal} connect src={imgGmail} alt="icon separator"/></th>
-                                <th><a href="www.linkedin.com/in/mitch-waite-6b10681ba" rel="noopener noreferrer" target="_blank"><Icon src={imgLinked} alt="icon separator"/></a></th>
+                                <th><a href="https://www.linkedin.com/in/mitch-waite-6b10681ba" rel="noopener noreferrer" target="_blank"><Icon src={imgLinked} alt="icon separator"/></a></th>
                                 <th><a href="https://github.com/elchaparrito1" rel="noopener noreferrer" target="_blank"><Icon src={imgGithub} alt="icon separator"/></a></th>
                                 <th><a href="https://www.facebook.com/mitchell.t.waite" rel="noopener noreferrer" target="_blank"><Icon src={imgFacebook} alt="icon separator"/></a></th>
                             </tr>

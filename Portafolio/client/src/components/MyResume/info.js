@@ -3,7 +3,7 @@ export const work = [
       title: 'Software Developer',
       company: 'Soon',
       timeline: 'Oct 2020 - Present',
-      description: 'My primary work is focused on the front end of the company\'s landing page. I\'ve largerly utilized my React knowledge to fix front-end bugs that were causing issues, and implement technical optimizations to help improve with SEO.'
+      description: 'My primary work is focused on the front end of the company\'s landing page. I\'ve largerly utilized my ReactJS knowledge to fix front-end bugs that were causing issues, and implement technical optimizations to help improve with SEO.'
   },
   {
       title: 'Freelance Software Developer',
@@ -15,7 +15,7 @@ export const work = [
       title: 'Software Developer',
       company: 'Foursteps',
       timeline: 'Jun 2019 - Nov 2019',
-      description: 'I worked as a React developer to help the company with migrating the code stack from Flask to ReactJS. With a large amount of legacy code, my responsibilities included a careful review of the old code to determine how best it can be converted over to ReactJS, using best practices and design patterns.'
+      description: 'I worked as a ReactJS developer to help the company with migrating the code stack from Flask to ReactJS. With a large amount of legacy code, my responsibilities included a careful review of the old code to determine how best it could be converted over to ReactJS, using best practices and design patterns.'
   },
   {
       title: 'Manager of Regulatory Affairs',
