@@ -29,7 +29,7 @@ export default function MyProjects() {
             },
             {
                 img: pfnImg,
-                title: 'Pace News',
+                title: 'Pace Football News',
                 descrip: 'Pace Football News is designed as a news aggregator website. This site was built with the JAMstack philosphy in mind. Using a WordPress CMS, content is easily uploaded by the client to their WordPress environment. Then this content is fed through to the uniquely neumorphic frontend - built using NextJS for server-side rendering - to allow for a perfectly scalable/configurable/very-fast user experience.',
                 linkOne: 'https://www.pacefootballnews.com/',
             },
