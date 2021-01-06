@@ -44,6 +44,25 @@ export const Container = styled.div`
     opacity: 2;
 `;
 
+export const Button = styled.button`
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    :hover {
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+    }
+
+    :active {
+        outline: none;
+        border: none;
+    }
+`;
+
 export const ChildDiv = styled.div`
     display: table-cell;
     vertical-align: middle;

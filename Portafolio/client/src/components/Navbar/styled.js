@@ -81,7 +81,6 @@ export const Links = styled(SideLinks)`
 
     :hover::after {
         width: 100%;
-        outline: none;
     }
 `;
 

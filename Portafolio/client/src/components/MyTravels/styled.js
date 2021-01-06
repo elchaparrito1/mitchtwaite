@@ -71,6 +71,25 @@ export const Text = styled.h1`
     
 `;
 
+export const Button = styled.button`
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    :hover {
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+    }
+
+    :active {
+        outline: none;
+        border: none;
+    }
+`;
+
 export const Boxtext = styled(Text)`
     margin-top: 20px;
     font-size: 1.5em;

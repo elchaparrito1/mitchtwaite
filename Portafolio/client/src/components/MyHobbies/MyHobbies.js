@@ -8,6 +8,7 @@ import {
     Column, 
     Text,
     ChildDiv,
+    Button,
     Icon,
     ImgDiv,
     Img
@@ -62,11 +63,16 @@ class MyHobbies extends React.Component {
 
     renderCards = () => {
         return hobbies.map((hobby, index) => {
+            console.log(index);
             return (
             <Column key={index} lg="4" md="6" sm="6" xs="12" style={{marginBottom: "25px"}}>
                 <Bounce bottom>
                     <ImgDiv>
-                        <Img onClick={() => this.setState({ isOpen: true, photoIndex: index})} src={hobby.img} alt="hobby photos"/>
+                        <Button onClick={() => this.setState({ isOpen: true, photoIndex: index})}>
+                            <Img 
+                                src={hobby.img} alt="hobby photos"
+                            />
+                        </Button>
                     </ImgDiv>
                 </Bounce>
             </Column>

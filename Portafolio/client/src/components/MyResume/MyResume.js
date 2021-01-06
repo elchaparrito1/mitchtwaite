@@ -121,7 +121,8 @@ export default function MyResume(props) {
                             <br/>
                             <Row>
                                 <Column lg="12" md="12" sm="12" xs="12">
-                                    <A href={PDF} 
+                                    <A
+                                        href={PDF} 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
                                         style={{color: "#003366"}}>

@@ -50,6 +50,25 @@ export const Foot = styled.div`
     width: 100%;
 `;
 
+export const Button = styled.button`
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    :hover {
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+    }
+
+    :active {
+        outline: none;
+        border: none;
+    }
+`;
+
 export const Text = styled.h1`
     color: #1a1a1a;
     font-family: 'Lato', Helvetica, sans-serif;
@@ -104,6 +123,7 @@ export const Icon = styled.img`
 
     :hover {
         cursor: pointer;
+        border: 2px solid #003366;
     }
 
     @media only screen and (max-width: 320px) {

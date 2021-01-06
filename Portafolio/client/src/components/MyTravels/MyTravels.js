@@ -7,6 +7,7 @@ import {
     Row, 
     Column, 
     Text,
+    Button,
     ChildDiv,
     Icon,
     ImgDiv,
@@ -50,7 +51,9 @@ class MyTravels extends React.Component {
             <Column key={index} lg="6" md="6" sm="6" xs="12" style={{marginBottom: "90px"}}>
                 <Bounce bottom>
                     <ImgDiv>
-                        <Img onClick={() => this.setState({ isOpen: true, photoIndex: index})} src={travel.img} alt="travel photos"/>
+                        <Button onClick={() => this.setState({ isOpen: true, photoIndex: index})}>
+                            <Img src={travel.img} alt="travel photos"/>
+                        </Button>
                     </ImgDiv>
                 </Bounce>
                 <Bounce bottom>

@@ -67,13 +67,31 @@ export default function Navbar() {
             return (
             <List>
                 <Pages contact>
-                    <Fade right><Link to="/contact"><Links link>Contact</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="3" to="/contact">
+                            <Links tabIndex="3" link>
+                            Contact
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
                 <Pages>
-                    <Fade right><Link to="/about"><Links link>About</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="2" to="/about">
+                            <Links tabIndex="-1" link>
+                            About
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
                 <Pages>
-                    <Fade right><Link to="/resume"><Links link>Resume</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="1" to="/resume">
+                            <Links tabIndex="-1" link>
+                            Resume
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
             </List>
             )
@@ -81,16 +99,40 @@ export default function Navbar() {
             return (
                 <List>
                 <Pages contact>
-                    <Fade right><Link to="/contact"><Links link>Contact</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="4" to="/contact">
+                            <Links tabIndex="-1" link>
+                            Contact
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
                 <Pages>
-                    <Fade right><Link to="/about"><Links link>About</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="3" to="/about">
+                            <Links tabIndex="-1" link>
+                            About
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
                 <Pages>
-                    <Fade right><Link to="/resume"><Links link>Resume</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="2" to="/resume">
+                            <Links tabIndex="-1" link>
+                            Resume
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
                 <Pages>
-                    <Fade right><Link to="/"><Links link>Home</Links></Link></Fade>
+                    <Fade right>
+                        <Link tabIndex="1" to="/">
+                            <Links tabIndex="-1" link>
+                            Home
+                            </Links>
+                        </Link>
+                    </Fade>
                 </Pages>
             </List>
             )
@@ -125,7 +167,8 @@ export default function Navbar() {
                   </div>
                   ) 
                   : 
-                  (<Row style={navStyle}>
+                  (
+                  <Row style={navStyle}>
                       <Column lg="12" md="12" sm="12" xs="12">
                           <table style={{float: "right"}}>
                               <tbody>
@@ -133,7 +176,8 @@ export default function Navbar() {
                           </tbody>
                       </table>
                   </Column>
-              </Row>)}
+              </Row>
+              )}
           </div>
     )
 };
